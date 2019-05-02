@@ -1,4 +1,4 @@
-package examen;
+﻿package examen;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,7 +9,8 @@ public class LeerPagos {
 	public BufferedReader input;
 	
 	/*He capturado el error de FileNotFoundException 
-	con un try catch de los metodos abrir y cerrar*/
+	con un try catch de los metodos abrir y cerrar
+	Esto lo ha hecho Geancarlo*/
 	public void abrir(){
 
 		try {
