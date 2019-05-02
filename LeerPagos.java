@@ -8,14 +8,27 @@ public class LeerPagos {
 	public FileReader Reader;
 	public BufferedReader input;
 	
-	public void abrir() throws IOException{
-		Reader=new FileReader("C:\\Users\\franp\\eclipse-workspace\\GeancarloPizarroTutiven_Programacion\\src\\examen\\pagos.csv");
-		input=new BufferedReader(Reader);
+	/*He capturado el error de FileNotFoundException 
+	con un try catch de los metodos abrir y cerrar*/
+	public void abrir(){
+
+		try {
+			Reader=new FileReader(".\\pagos.csv");
+			input=new BufferedReader(Reader);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void cerrar() throws IOException {
-		if(input!=null)
-			input.close();
+		try {
+				if(input!=null)
+				input.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	
 	}
 	
@@ -31,7 +44,7 @@ public class LeerPagos {
 			cadena=input.readLine();
 			for(Proveedor p: lista_proveedores) {
             	if(p.codigo==proveedor)
-            		p.AñadirPago(new Pagos(linea));
+            		p.Aï¿½adirPago(new Pagos(linea));
             }
 		}
 		 } catch (FileNotFoundException e) {
