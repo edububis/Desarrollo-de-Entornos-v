@@ -8,7 +8,11 @@ public class Pagos {
 	public int trimestre;
 	public int año;
 	public double importe;
-	
+	/**
+	*
+	*Inicializa Pagos a sus valores nulos.
+	*
+	**/
 	public Pagos() {
 		this.factura="";
 		this.trimestre=0;
