@@ -17,17 +17,17 @@ public class Prueba {
         lp.abrir();
         lpg.abrir();
 		
-		System.out.println("Menú");
+		System.out.println("Menï¿½");
 		System.out.println("1. Leer proveedores");
 		System.out.println("2. Leer pagos");
 		System.out.println("3. Generar IVA de un trimestre");
 		System.out.println("4. Informe de pagos anuales");
 		
-		System.out.println("Dame una opción");
+		System.out.println("Dame una opciï¿½n");
 
 		int opcion=sc.nextInt();
 		
-		System.out.println("la opción es "+opcion);
+		System.out.println("la opciï¿½n es "+opcion);
 		
 		do {
 		switch(opcion) {
@@ -37,17 +37,17 @@ public class Prueba {
 		
 			System.out.println("Introduzca el trimestre: ");
 		        int trimestre=sc.nextInt();
-		        System.out.println("Introduzca el año: ");
-		        int año=sc.nextInt();
+		        System.out.println("Introduzca el aï¿½o: ");
+		        int aï¿½o=sc.nextInt();
 		        lpg.LeerFichero(lista_proveedores);
-		        System.out.println("Informe de IVA del trimestre "+trimestre+" del año "+año);
+		        System.out.println("Informe de IVA del trimestre "+trimestre+" del aï¿½o "+aï¿½o);
 		        for(Proveedor p2: lista_proveedores) {
-					System.out.println("Proveedor "+p2.nombre+" "+p2.TotalTrimestre(trimestre,año));}
+					System.out.println("Proveedor "+p2.nombre+" "+p2.TotalTrimestre(trimestre,aï¿½o));}
 				System.out.println("********************************************************"); break;
-				//p.AñadirPago();
-		        //System.out.print(p.TotalTrimestre(trimestre, año)); break;
+				//p.Aï¿½adirPago();
+		        //System.out.print(p.TotalTrimestre(trimestre, aï¿½o)); break;
 		//case 4: break;
-		default: System.out.println("La opción es incorrecta."); break;
+		default: System.out.println("La opciï¿½n es incorrecta."); break;
 		}
 		}while(opcion<=4);
 		sc.close();
